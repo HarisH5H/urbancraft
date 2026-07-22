@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UrbanCraft Furniture — Crafted with Passion. Built for Comfort. Designed for Life.</title>
+<meta name="description" content="UrbanCraft Furniture — premium handcrafted wooden furniture, custom design, and complete living solutions for homes and businesses across India.">
+
+<!-- Favicons -->
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="assets/site.webmanifest">
+<meta name="theme-color" content="#F8F6F2">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F8F6F2;
+    --cream-deep:#F1ECE3;
+    --brown:#6B4F3B;
+    --brown-soft:#8A6E58;
+    --green:#355E3B;
+    --green-deep:#2A4B30;
+    --gold:#C89B3C;
+    --gold-soft:#DCB863;
+    --line:rgba(107,79,59,0.14);
+    --whatsapp:#25D366;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--cream);
+    color:var(--brown);
+    font-family:'Poppins',sans-serif;
+    font-weight:300;
+    line-height:1.7;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.serif{font-family:'Playfair Display',serif;}
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 40px;}
+  section{position:relative;}
+  .eyebrow{
+    font-size:12px;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--gold);font-weight:600;margin-bottom:18px;display:inline-block;
+  }
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:16px 34px;border-radius:2px;font-family:'Poppins',sans-serif;
+    font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;
+    cursor:pointer;border:1px solid transparent;transition:transform .35s cubic-bezier(.4,0,.2,1), box-shadow .35s cubic-bezier(.4,0,.2,1), background .35s ease, color .35s ease;
+    white-space:nowrap;
+    min-height:44px;
+  }
+  .btn-primary{background:var(--gold);color:#3a2a13;}
+  .btn-primary:hover{background:var(--gold-soft);transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(200,155,60,0.55);}
+  .btn-primary:active{transform:translateY(0) scale(.97);box-shadow:0 6px 16px -10px rgba(200,155,60,0.6);}
+  .btn-outline{border-color:var(--brown);color:var(--brown);background:transparent;}
+  .btn-outline:hover{background:var(--brown);color:var(--cream);transform:translateY(-2px);}
+  .btn-outline:active{transform:translateY(0) scale(.97);}
+  .btn-outline-light{border-color:rgba(248,246,242,0.55);color:var(--cream);}
+  .btn-outline-light:hover{background:var(--cream);color:var(--green-deep);transform:translateY(-2px);}
+  .btn-outline-light:active{transform:translateY(0) scale(.97);}
+
+  /* ---------- NAV ---------- */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    background:rgba(248,246,242,0.7);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+    border-bottom:1px solid transparent;
+    transition:background .4s ease, border-color .4s ease, box-shadow .4s ease;
+  }
+  header.scrolled{
+    background:rgba(248,246,242,0.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+    box-shadow:0 4px 24px rgba(107,79,59,0.08);
+  }
+  nav{display:flex;align-items:center;justify-content:space-between;padding:14px 40px;max-width:1240px;margin:0 auto;}
+  .brand{display:flex;align-items:center;gap:14px;}
+  .brand .logo-badge{
+    width:54px;height:54px;border-radius:12px;background:#fff;
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+    box-shadow:0 6px 16px -6px rgba(107,79,59,0.35);padding:6px;
+  }
+  .brand .logo-badge img{width:100%;height:100%;object-fit:contain;}
+  .brand-name{font-family:'Playfair Display',serif;font-size:21px;letter-spacing:.03em;font-weight:600;color:var(--brown);line-height:1.15;}
+  .brand-name small{display:block;font-family:'Poppins',sans-serif;font-size:9.5px;letter-spacing:.22em;font-weight:500;color:var(--brown-soft);text-transform:uppercase;margin-top:1px;}
+  .brand-name span{color:var(--gold);}
+  .nav-links{display:flex;gap:38px;align-items:center;}
+  .nav-links a{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;color:var(--brown-soft);position:relative;padding-bottom:4px;}
+  .nav-links a:hover{color:var(--brown);}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s ease;}
+  .nav-links a:hover::after{width:100%;}
+  .nav-cta{display:flex;gap:14px;}
+  .burger{display:none;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    min-height:100vh;display:flex;align-items:center;
+    padding:150px 0 90px;
+    background:
+      radial-gradient(circle at 82% 18%, rgba(200,155,60,0.16), transparent 45%),
+      linear-gradient(180deg, var(--cream) 0%, var(--cream-deep) 100%);
+  }
+  .hero .wrap{display:grid;grid-template-columns:1.05fr 0.95fr;gap:70px;align-items:center;}
+  .hero-eyebrow{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:24px;}
+  .hero h1{
+    font-size:clamp(38px,5vw,64px);line-height:1.08;font-weight:600;color:var(--brown);
+    margin-bottom:26px;letter-spacing:-.01em;
+  }
+  .hero h1 em{font-style:italic;color:var(--green);}
+  .hero p{font-size:16.5px;color:var(--brown-soft);max-width:490px;margin-bottom:20px;font-weight:300;}
+  .hero-lines{margin:26px 0 34px;border-left:2px solid var(--gold);padding-left:22px;}
+  .hero-lines p{font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:var(--brown);line-height:1.9;margin-bottom:0;}
+  .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;}
+
+  .hero-art{position:relative;aspect-ratio:1/1.02;border-radius:0 220px 0 220px;overflow:hidden;
+    background-size:cover;background-position:center;
+    box-shadow:0 50px 90px -40px rgba(107,79,59,0.55);
+  }
+  .hero-art::before{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(190deg, rgba(28,20,13,0.05) 40%, rgba(20,14,9,0.72) 100%);
+  }
+  .hero-art .frame-content{
+    position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;
+    text-align:left;color:var(--cream);padding:34px;
+  }
+  .hero-art .frame-content .cap{font-family:'Playfair Display',serif;font-style:italic;font-size:15px;letter-spacing:.02em;color:var(--gold-soft);max-width:260px;}
+  .hero-art .corner-badge{
+    position:absolute;top:26px;left:26px;background:rgba(248,246,242,0.16);
+    border:1px solid rgba(248,246,242,0.4);border-radius:100px;padding:8px 18px;
+    font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--cream);
+    backdrop-filter:blur(6px);
+  }
+
+  /* ---------- SECTION HEADERS ---------- */
+  .section-head{max-width:640px;margin-bottom:64px;}
+  .section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+  .section-head h2{font-size:clamp(30px,3.6vw,44px);font-weight:600;line-height:1.18;color:var(--brown);}
+  .section-head p{margin-top:18px;color:var(--brown-soft);font-size:15.5px;max-width:560px;}
+  .section-head.center p{margin-left:auto;margin-right:auto;}
+
+  /* ---------- STORY ---------- */
+  .story{padding:130px 0;background:var(--cream);}
+  .story .wrap{display:grid;grid-template-columns:0.85fr 1.15fr;gap:80px;align-items:center;}
+  .story-art{
+    aspect-ratio:4/5;border-radius:220px 0 220px 0;position:relative;overflow:hidden;
+    background-size:cover;background-position:center;
+    box-shadow:0 40px 70px -35px rgba(107,79,59,0.4);
+  }
+  .story-art::before{content:"";position:absolute;inset:0;
+    background:linear-gradient(200deg, rgba(20,14,9,0) 45%, rgba(20,14,9,0.55) 100%);}
+  .story-art .tag{position:absolute;bottom:26px;left:26px;right:26px;background:rgba(248,246,242,0.94);
+    border-radius:4px;padding:16px 20px;font-size:12.5px;color:var(--brown);letter-spacing:.02em;z-index:1;}
+  .story-art .tag strong{display:block;font-family:'Playfair Display',serif;font-size:14px;margin-bottom:2px;color:var(--green);}
+  .story-body .eyebrow{margin-bottom:16px;}
+  .story-body h2{font-size:clamp(28px,3.4vw,40px);font-weight:600;margin-bottom:26px;line-height:1.2;}
+  .story-body p{color:var(--brown-soft);font-size:15.5px;margin-bottom:16px;}
+  .story-quote{
+    margin:32px 0;padding:28px 30px;border-left:3px solid var(--gold);background:var(--cream-deep);
+    border-radius:0 6px 6px 0;
+  }
+  .story-quote p{font-family:'Playfair Display',serif;font-style:italic;font-size:19px;color:var(--brown);line-height:1.6;margin:0;}
+  .story-quote span{display:block;margin-top:12px;font-family:'Poppins',sans-serif;font-style:normal;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);font-weight:600;}
+
+  /* ---------- PRODUCTS ---------- */
+  .products{padding:130px 0;background:var(--cream-deep);}
+  .prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  .prod-card{
+    background:var(--cream);border-radius:16px;overflow:hidden;
+    box-shadow:0 18px 40px -28px rgba(107,79,59,0.35);
+    transition:transform .45s cubic-bezier(.4,0,.2,1), box-shadow .45s ease;
+    border:1px solid var(--line);
+    cursor:pointer;
+  }
+  .prod-card:hover{transform:translateY(-8px);box-shadow:0 30px 55px -25px rgba(107,79,59,0.4);}
+  .prod-card:hover .prod-photo img{transform:scale(1.06);}
+  .prod-photo{aspect-ratio:4/3;overflow:hidden;position:relative;background:var(--cream-deep);}
+  .prod-photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.4,0,.2,1), opacity .6s ease;opacity:0;}
+  .prod-photo img.loaded{opacity:1;}
+  .prod-body{padding:28px 28px 30px;}
+  .prod-card h3{font-size:21px;font-weight:600;margin-bottom:12px;color:var(--brown);}
+  .prod-card p{font-size:13.5px;color:var(--brown-soft);margin-bottom:16px;}
+  .prod-card .items{font-size:12.5px;color:var(--brown-soft);}
+  .prod-card .items b{color:var(--gold);font-weight:600;}
+  .prod-card .items span{display:block;margin-top:6px;padding-top:6px;border-top:1px dashed var(--line);}
+  .prod-card .items span:first-of-type{border-top:none;padding-top:0;margin-top:0;}
+
+  /* ---------- CONSULT BANNER ---------- */
+  .consult{
+    padding:100px 0;background:var(--green);color:var(--cream);position:relative;overflow:hidden;
+  }
+  .consult::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;
+    border:1px solid rgba(248,246,242,0.14);top:-260px;right:-140px;}
+  .consult::after{content:"";position:absolute;width:340px;height:340px;border-radius:50%;
+    border:1px solid rgba(248,246,242,0.1);bottom:-200px;left:-100px;}
+  .consult .wrap{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;position:relative;z-index:1;}
+  .consult-text{max-width:600px;}
+  .consult .eyebrow{color:var(--gold-soft);}
+  .consult h2{font-size:clamp(26px,3.2vw,38px);font-weight:600;margin-bottom:16px;line-height:1.25;}
+  .consult p{color:rgba(248,246,242,0.78);font-size:15px;max-width:520px;}
+  .consult-ctas{display:flex;gap:16px;flex-wrap:wrap;}
+
+  /* ---------- WHY US ---------- */
+  .why{padding:130px 0;position:relative;isolation:isolate;
+    background:linear-gradient(rgba(248,246,242,0.94), rgba(248,246,242,0.97)), url('https://images.pexels.com/photos/172296/pexels-photo-172296.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover;
+  }
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .why-card{
+    padding:34px 28px;border-radius:16px;background:var(--cream);
+    border:1px solid var(--line);position:relative;
+    transition:border-color .35s ease, background .35s ease, transform .35s ease;
+  }
+  .why-card:hover{border-color:var(--gold);background:var(--cream-deep);transform:translateY(-4px);}
+  .why-num{font-family:'Playfair Display',serif;font-style:italic;font-size:15px;color:var(--gold);margin-bottom:14px;display:block;}
+  .why-card h3{font-size:18.5px;font-weight:600;margin-bottom:10px;}
+  .why-card p{font-size:13.5px;color:var(--brown-soft);}
+
+  /* ---------- PROCESS TIMELINE ---------- */
+  .process{padding:130px 0 150px;background:var(--cream-deep);}
+  .timeline{display:grid;grid-template-columns:repeat(7,1fr);gap:14px;position:relative;}
+  .timeline::before{
+    content:"";position:absolute;top:22px;left:0;right:0;height:1px;
+    background:linear-gradient(90deg, transparent, var(--gold) 8%, var(--gold) 92%, transparent);
+    z-index:0;
+  }
+  .tl-step{position:relative;z-index:1;text-align:left;}
+  .tl-dot{
+    width:44px;height:44px;border-radius:50%;background:var(--cream-deep);
+    border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;
+    font-family:'Playfair Display',serif;font-style:italic;font-size:14px;color:var(--brown);margin-bottom:18px;
+    transition:background .35s ease, color .35s ease;
+  }
+  .process .cream-bg .tl-dot{background:var(--cream);}
+  .tl-step h4{font-size:14.5px;font-weight:600;margin-bottom:6px;color:var(--brown);}
+  .tl-step p{font-size:12px;color:var(--brown-soft);line-height:1.5;}
+
+  /* ---------- ABOUT ---------- */
+  .about{padding:130px 0;background:var(--cream);}
+  .about .wrap{display:grid;grid-template-columns:1.1fr 0.9fr;gap:80px;align-items:center;}
+  .about-body .eyebrow{margin-bottom:16px;}
+  .about-body h2{font-size:clamp(28px,3.4vw,40px);font-weight:600;margin-bottom:24px;line-height:1.2;}
+  .about-body p{color:var(--brown-soft);font-size:15.5px;margin-bottom:15px;}
+  .about-sign{margin-top:28px;display:flex;align-items:center;gap:16px;}
+  .about-sign .initials{
+    width:52px;height:52px;border-radius:50%;background:var(--green);color:var(--cream);
+    display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-style:italic;font-size:18px;
+  }
+  .about-sign .name{font-family:'Playfair Display',serif;font-size:16px;color:var(--brown);font-weight:600;}
+  .about-sign .role{font-size:12px;color:var(--brown-soft);letter-spacing:.05em;text-transform:uppercase;}
+  .about-art{
+    aspect-ratio:4/5;border-radius:0 200px 0 200px;position:relative;overflow:hidden;
+    background-size:cover;background-position:center;
+    box-shadow:0 40px 70px -35px rgba(107,79,59,0.45);
+  }
+  .about-art::before{content:"";position:absolute;inset:0;
+    background:linear-gradient(190deg, rgba(20,14,9,0.02) 45%, rgba(20,14,9,0.66) 100%);}
+  .about-art .frame-content{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;padding:34px;text-align:left;}
+  .about-art .cap{font-family:'Playfair Display',serif;font-style:italic;color:var(--cream);font-size:14.5px;max-width:240px;}
+
+  /* ---------- CONTACT ---------- */
+  .contact{padding:130px 0;position:relative;overflow:hidden;color:var(--cream);
+    background:linear-gradient(rgba(53,94,59,0.93), rgba(42,75,48,0.96)), url('https://images.pexels.com/photos/5801652/pexels-photo-5801652.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover;
+  }
+  .contact::before{content:"";position:absolute;width:600px;height:600px;border:1px solid rgba(248,246,242,0.1);
+    border-radius:50%;top:-320px;right:-220px;}
+  .contact .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:70px;}
+  .contact-head .eyebrow{color:var(--gold-soft);}
+  .contact-head h2{font-size:clamp(28px,3.6vw,42px);font-weight:600;line-height:1.2;margin-bottom:20px;}
+  .contact-head p{color:rgba(248,246,242,0.78);font-size:15px;max-width:440px;margin-bottom:32px;}
+  .contact-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:40px;}
+
+  /* Contact info card */
+  .contact-card{
+    background:var(--cream);border-radius:16px;padding:30px;box-shadow:0 20px 45px -25px rgba(0,0,0,0.4);
+    margin-bottom:0;
+  }
+  .contact-card h3{color:var(--brown);font-size:17px;font-weight:600;margin-bottom:18px;}
+  .contact-info{display:flex;flex-direction:column;gap:6px;}
+  .info-row{
+    display:flex;align-items:center;gap:14px;padding:12px 10px;border-radius:10px;
+    color:var(--brown);transition:background .3s ease, transform .3s ease;min-height:44px;
+  }
+  a.info-row:hover{background:var(--cream-deep);transform:translateX(4px);}
+  .info-icon{
+    width:38px;height:38px;border-radius:50%;background:var(--cream-deep);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--green);
+    transition:background .3s ease, color .3s ease;
+  }
+  a.info-row:hover .info-icon{background:var(--gold);color:#fff;}
+  .info-row .info-text b{display:block;font-size:13.5px;color:var(--brown);font-weight:600;}
+  .info-row .info-text span{font-size:12.5px;color:var(--brown-soft);}
+  .info-row.insta:hover .info-icon{background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);color:#fff;}
+  .hours-row{border-top:1px dashed var(--line);margin-top:8px;padding-top:16px;}
+
+  /* Map */
+  .map-card{
+    margin-top:20px;border-radius:16px;overflow:hidden;box-shadow:0 20px 45px -25px rgba(0,0,0,0.4);
+    background:var(--cream);
+  }
+  .map-frame-wrap{width:100%;aspect-ratio:16/10;background:var(--cream-deep);}
+  .map-frame-wrap iframe{width:100%;height:100%;border:0;display:block;}
+  .map-card-foot{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+    padding:16px 20px;
+  }
+  .map-coords{font-size:11.5px;color:var(--brown-soft);letter-spacing:.02em;}
+  .map-coords b{color:var(--brown);font-weight:600;}
+
+  .form-card{background:var(--cream);border-radius:16px;padding:38px;box-shadow:0 30px 60px -25px rgba(0,0,0,0.35);}
+  .form-card h3{color:var(--brown);font-size:20px;font-weight:600;margin-bottom:22px;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+  .form-card label{display:block;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--brown-soft);margin-bottom:7px;font-weight:500;}
+  .form-card input, .form-card select, .form-card textarea{
+    width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:6px;
+    background:var(--cream-deep);color:var(--brown);font-family:'Poppins',sans-serif;font-size:13.5px;
+    transition:box-shadow .3s ease, border-color .3s ease, background .3s ease;
+  }
+  .form-card input:focus, .form-card select:focus, .form-card textarea:focus{
+    outline:none;border-color:var(--gold);background:var(--cream);
+    box-shadow:0 0 0 3px rgba(200,155,60,0.22), 0 8px 18px -12px rgba(200,155,60,0.5);
+  }
+  .form-card textarea{resize:vertical;min-height:90px;}
+  .form-full{margin-bottom:18px;}
+  .form-card .btn{width:100%;justify-content:center;margin-top:6px;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--green-deep);color:rgba(248,246,242,0.75);padding:70px 0 30px;}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:50px;margin-bottom:55px;}
+  .foot-brand{display:flex;align-items:center;gap:14px;margin-bottom:18px;}
+  .foot-brand .logo-badge{width:48px;height:48px;border-radius:10px;background:#fff;box-shadow:none;padding:5px;}
+  .foot-brand .brand-name{color:var(--cream);}
+  .foot-brand .brand-name small{color:rgba(248,246,242,0.6);}
+  .foot-col h4{color:var(--cream);font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:20px;font-weight:600;}
+  .foot-col ul li{margin-bottom:11px;font-size:13.5px;}
+  .foot-col ul li a{transition:color .3s ease;}
+  .foot-col ul li a:hover{color:var(--gold-soft);}
+  .foot-desc{font-size:13.5px;max-width:320px;margin-bottom:20px;}
+  .foot-tag{font-family:'Playfair Display',serif;font-style:italic;color:var(--gold-soft);font-size:14.5px;}
+  .foot-social{display:flex;gap:10px;margin-top:20px;}
+  .foot-social a{
+    width:38px;height:38px;border-radius:50%;border:1px solid rgba(248,246,242,0.25);
+    display:flex;align-items:center;justify-content:center;color:var(--cream);
+    transition:transform .3s ease, background .3s ease, border-color .3s ease;
+  }
+  .foot-social a:hover{transform:translateY(-3px) scale(1.06);background:var(--gold);border-color:var(--gold);color:#3a2a13;}
+  .foot-social a.insta:hover{background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);border-color:transparent;color:#fff;}
+  .foot-social a.whatsapp:hover{background:var(--whatsapp);border-color:var(--whatsapp);color:#fff;}
+  .foot-bottom{border-top:1px solid rgba(248,246,242,0.12);padding-top:26px;display:flex;justify-content:space-between;align-items:center;font-size:12.5px;flex-wrap:wrap;gap:12px;}
+  .foot-col ul li.foot-contact-item{display:flex;align-items:center;gap:8px;}
+  .foot-col ul li a.foot-contact-link:hover{color:var(--gold-soft);}
+
+  /* ---------- FLOATING WHATSAPP ---------- */
+  .whatsapp-float{
+    position:fixed;bottom:24px;right:24px;z-index:200;
+    width:60px;height:60px;border-radius:50%;background:var(--whatsapp);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 28px -8px rgba(37,211,102,0.65), 0 4px 12px rgba(0,0,0,0.15);
+    transition:transform .3s cubic-bezier(.4,0,.2,1), box-shadow .3s ease;
+    animation:wa-pop .6s cubic-bezier(.34,1.56,.64,1) .4s both;
+  }
+  .whatsapp-float:hover{transform:scale(1.08);box-shadow:0 14px 34px -8px rgba(37,211,102,0.75), 0 4px 14px rgba(0,0,0,0.18);}
+  .whatsapp-float:active{transform:scale(1.0);}
+  .whatsapp-float svg{width:30px;height:30px;}
+  @keyframes wa-pop{
+    0%{transform:scale(0);opacity:0;}
+    100%{transform:scale(1);opacity:1;}
+  }
+  @media (max-width:720px){
+    .whatsapp-float{bottom:20px;right:20px;width:56px;height:56px;}
+  }
+
+  /* ---------- MISC / ANIM ---------- */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .55s ease-in-out, transform .55s cubic-bezier(.4,0,.2,1);}
+  .reveal.in{opacity:1;transform:translateY(0);}
+  .reveal-left{opacity:0;transform:translateX(-32px);transition:opacity .6s ease-in-out, transform .6s cubic-bezier(.4,0,.2,1);}
+  .reveal-left.in{opacity:1;transform:translateX(0);}
+  .reveal-right{opacity:0;transform:translateX(32px);transition:opacity .6s ease-in-out, transform .6s cubic-bezier(.4,0,.2,1);}
+  .reveal-right.in{opacity:1;transform:translateX(0);}
+  .reveal-scale{opacity:0;transform:scale(.94);transition:opacity .6s ease-in-out, transform .6s cubic-bezier(.4,0,.2,1);}
+  .reveal-scale.in{opacity:1;transform:scale(1);}
+
+  .hero-copy > *{opacity:0;transform:translateY(18px);animation:hero-in .7s cubic-bezier(.4,0,.2,1) forwards;}
+  .hero-copy .hero-eyebrow{animation-delay:.05s;}
+  .hero-copy h1{animation-delay:.15s;}
+  .hero-copy p{animation-delay:.28s;}
+  .hero-copy .hero-lines{animation-delay:.4s;}
+  .hero-copy .hero-ctas{animation-delay:.52s;}
+  .hero-art{opacity:0;transform:translateY(24px) scale(.97);animation:hero-art-in .9s cubic-bezier(.4,0,.2,1) .3s forwards;}
+  @keyframes hero-in{to{opacity:1;transform:translateY(0);}}
+  @keyframes hero-art-in{to{opacity:1;transform:translateY(0) scale(1);}}
+
+  @media (max-width:980px){
+    .hero .wrap, .story .wrap, .about .wrap, .contact .wrap{grid-template-columns:1fr;}
+    .hero-art{order:-1;max-width:420px;margin:0 auto;}
+    .prod-grid{grid-template-columns:repeat(2,1fr);}
+    .why-grid{grid-template-columns:repeat(2,1fr);}
+    .timeline{grid-template-columns:repeat(4,1fr);row-gap:34px;}
+    .timeline::before{display:none;}
+    .foot-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:720px){
+    .nav-links, .nav-cta{display:none;}
+    .wrap{padding:0 24px;}
+    .prod-grid, .why-grid{grid-template-columns:1fr;}
+    .timeline{grid-template-columns:repeat(2,1fr);}
+    .form-row{grid-template-columns:1fr;}
+    .consult .wrap, .foot-bottom{flex-direction:column;align-items:flex-start;}
+    .foot-grid{grid-template-columns:1fr;gap:36px;}
+    .map-frame-wrap{aspect-ratio:4/3.4;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .reveal, .reveal-left, .reveal-right, .reveal-scale{opacity:1;transform:none;transition:none;}
+    .hero-copy > *, .hero-art{opacity:1;transform:none;animation:none;}
+    .whatsapp-float{animation:none;}
+    html{scroll-behavior:auto;}
+  }
+
+  /* Visible keyboard focus */
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible{
+    outline:2px solid var(--gold);outline-offset:2px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#home" class="brand">
+      <span class="logo-badge"><img src="assets/logo.png" alt="UrbanCraft Furniture logo" width="54" height="54" loading="eager"></span>
+      <span class="brand-name">UrbanCraft<small>Furniture</small></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-primary">Book Consultation</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="hero-eyebrow">Handcrafted Since the First Workshop</span>
+      <h1>Crafted for Living.<br>Designed for <em>Comfort.</em></h1>
+      <p>Furniture is more than decoration. Every empty space has the potential to become something meaningful — a reading chair beside the window, a table where families gather, a sofa where conversations begin.</p>
+      <div class="hero-lines">
+        <p>"We don't simply manufacture furniture — we create spaces where people feel comfortable, connected, and truly at home."</p>
+      </div>
+      <div class="hero-ctas">
+        <a href="#products" class="btn btn-primary">Explore Collection</a>
+        <a href="#contact" class="btn btn-outline">Customize Your Furniture</a>
+      </div>
+    </div>
+    <div class="hero-art" style="background-image:url('https://images.pexels.com/photos/19689230/pexels-photo-19689230.jpeg?auto=compress&cs=tinysrgb&w=1400')">
+      <span class="corner-badge">Est. in a carpenter's workshop</span>
+      <div class="frame-content">
+        <span class="cap">A living room built around a handcrafted sofa, wooden TV unit, and warm ambient light</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OUR STORY ============ -->
+<section class="story" id="story">
+  <div class="wrap">
+    <div class="story-art reveal-left" style="background-image:url('https://images.pexels.com/photos/18947396/pexels-photo-18947396.jpeg?auto=compress&cs=tinysrgb&w=1200')">
+      <div class="tag"><strong>The Workshop</strong>Where every UrbanCraft piece begins — timber, tools, and three generations of craft.</div>
+    </div>
+    <div class="story-body reveal-right">
+      <span class="eyebrow">Our Story</span>
+      <h2>Every Home Begins<br>with a Story</h2>
+      <p>Every home begins as an empty space. But an empty house is not a home until it is filled with comfort, warmth, and memories. At UrbanCraft, furniture is never just wood, steel, or fabric — it becomes part of everyday life.</p>
+      <p>It is where children grow. Families gather. Friends laugh. Dreams begin. Memories are created.</p>
+      <div class="story-quote">
+        <p>"People don't buy furniture. They buy comfort, trust, and something that becomes part of their lives."</p>
+        <span>— Harish's Father, Master Carpenter</span>
+      </div>
+      <p>Today we combine traditional craftsmanship with modern design to create furniture that is elegant, functional, durable, and made specifically for the people who use it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRODUCTS ============ -->
+<section class="products" id="products">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Our Products</span>
+      <h2>Furniture Designed Around Your Lifestyle</h2>
+      <p>Every family lives differently. That's why every furniture solution should be unique — for compact apartments and spacious villas alike.</p>
+    </div>
+    <div class="prod-grid">
+
+      <div class="prod-card reveal-scale">
+        <div class="prod-photo"><img src="https://images.pexels.com/photos/8288962/pexels-photo-8288962.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Modern wooden living room with sofa and natural light" loading="lazy" width="800" height="600" onload="this.classList.add('loaded')"></div>
+        <div class="prod-body">
+          <h3>Living Room</h3>
+          <p>Centrepieces for gathering and unwinding.</p>
+          <div class="items"><span><b>Includes —</b> Luxury Sofas</span><span>TV Units</span><span>Coffee Tables</span></div>
+        </div>
+      </div>
+
+      <div class="prod-card reveal-scale">
+        <div class="prod-photo"><img src="https://images.pexels.com/photos/6480198/pexels-photo-6480198.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Modern bedroom with wooden bed and parquet flooring" loading="lazy" width="800" height="600" onload="this.classList.add('loaded')"></div>
+        <div class="prod-body">
+          <h3>Bedroom</h3>
+          <p>Restful, personal spaces built to last.</p>
+          <div class="items"><span><b>Includes —</b> Beds</span><span>Wardrobes</span><span>Modular Storage</span></div>
+        </div>
+      </div>
+
+      <div class="prod-card reveal-scale">
+        <div class="prod-photo"><img src="https://images.pexels.com/photos/3968056/pexels-photo-3968056.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Wooden dining table and chairs" loading="lazy" width="800" height="600" onload="this.classList.add('loaded')"></div>
+        <div class="prod-body">
+          <h3>Dining</h3>
+          <p>Tables where every meal becomes a memory.</p>
+          <div class="items"><span><b>Includes —</b> Dining Tables</span><span>Dining Chairs</span></div>
+        </div>
+      </div>
+
+      <div class="prod-card reveal-scale">
+        <div class="prod-photo"><img src="https://images.pexels.com/photos/7534216/pexels-photo-7534216.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Modern office interior with wooden paneling and furniture" loading="lazy" width="800" height="600" onload="this.classList.add('loaded')"></div>
+        <div class="prod-body">
+          <h3>Office</h3>
+          <p>Focused, ergonomic workspaces.</p>
+          <div class="items"><span><b>Includes —</b> Office Tables</span><span>Storage Units</span><span>Office Chairs</span></div>
+        </div>
+      </div>
+
+      <div class="prod-card reveal-scale">
+        <div class="prod-photo"><img src="https://images.pexels.com/photos/18426842/pexels-photo-18426842.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Elegant hotel lobby seating area" loading="lazy" width="800" height="600" onload="this.classList.add('loaded')"></div>
+        <div class="prod-body">
+          <h3>Hospitality</h3>
+          <p>Durable furniture for hotels and restaurants.</p>
+          <div class="items"><span><b>Includes —</b> Hotel Furniture</span><span>Restaurant Furniture</span></div>
+        </div>
+      </div>
+
+      <div class="prod-card reveal-scale">
+        <div class="prod-photo"><img src="https://images.pexels.com/photos/5490931/pexels-photo-5490931.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Furniture showroom display with custom pieces" loading="lazy" width="800" height="600" onload="this.classList.add('loaded')"></div>
+        <div class="prod-body">
+          <h3>Custom Furniture</h3>
+          <p>Personalized designs made to your exact space.</p>
+          <div class="items"><span><b>Includes —</b> Bespoke Design</span><span>Made-to-Measure Builds</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONSULTATION BANNER ============ -->
+<section class="consult">
+  <div class="wrap">
+    <div class="consult-text reveal">
+      <span class="eyebrow">Consultation</span>
+      <h2>Your Space. Your Lifestyle. Your Furniture.</h2>
+      <p>Before we craft a single piece, we take time to understand your space, your lifestyle, your budget, and your interior theme — so every recommendation fits, not just furnishes.</p>
+    </div>
+    <div class="consult-ctas reveal">
+      <a href="#contact" class="btn btn-primary">Book Free Consultation</a>
+      <a href="#contact" class="btn btn-outline-light">Request Custom Design</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Why Choose UrbanCraft</span>
+      <h2>More Than Furniture.<br>Complete Living Solutions.</h2>
+      <p>We believe furniture should solve problems, not create them. Every design starts by understanding your space, your lifestyle, and your daily needs.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><span class="why-num">01</span><h3>Custom Furniture</h3><p>Designed according to your exact space, not a generic mould.</p></div>
+      <div class="why-card reveal"><span class="why-num">02</span><h3>Premium Craftsmanship</h3><p>Made with attention to every joint, grain, and finish.</p></div>
+      <div class="why-card reveal"><span class="why-num">03</span><h3>Smart Space Solutions</h3><p>Space-saving designs built for maximum functionality.</p></div>
+      <div class="why-card reveal"><span class="why-num">04</span><h3>Factory-Direct Pricing</h3><p>Premium quality without unnecessary middlemen.</p></div>
+      <div class="why-card reveal"><span class="why-num">05</span><h3>Professional Installation</h3><p>Precise measurement and a perfect fit, every time.</p></div>
+      <div class="why-card reveal"><span class="why-num">06</span><h3>After-Sales Support</h3><p>Product warranty and a long-term relationship.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MANUFACTURING PROCESS ============ -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Our Process</span>
+      <h2>From Consultation to Installation</h2>
+      <p>A clear, seven-step journey — the same one every UrbanCraft piece follows before it reaches your home.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-step reveal"><div class="tl-dot">01</div><h4>Consultation</h4><p>Understanding space, budget & style.</p></div>
+      <div class="tl-step reveal"><div class="tl-dot">02</div><h4>Design</h4><p>Personalized furniture concepts.</p></div>
+      <div class="tl-step reveal"><div class="tl-dot">03</div><h4>Material Selection</h4><p>Sustainable, premium timber & fabric.</p></div>
+      <div class="tl-step reveal"><div class="tl-dot">04</div><h4>Manufacturing</h4><p>Handcrafted in our own workshop.</p></div>
+      <div class="tl-step reveal"><div class="tl-dot">05</div><h4>Quality Check</h4><p>Every joint and finish inspected.</p></div>
+      <div class="tl-step reveal"><div class="tl-dot">06</div><h4>Delivery</h4><p>Careful, scheduled transport.</p></div>
+      <div class="tl-step reveal"><div class="tl-dot">07</div><h4>Installation</h4><p>Set up in your home, ready to live in.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-body reveal-left">
+      <span class="eyebrow">About Us</span>
+      <h2>From My Father's Workshop to Your Home</h2>
+      <p>Hello, I'm Harish, founder of UrbanCraft Furniture. My journey began in my father's workshop, watching him transform raw wood into furniture that became part of people's everyday lives.</p>
+      <p>He never believed furniture was just a business. He believed every piece should make someone's life more comfortable. That philosophy shaped who I am — and it shapes UrbanCraft today.</p>
+      <p>For us, success isn't measured by sales. It's measured by the happiness of every family that welcomes our furniture into their home.</p>
+      <div class="about-sign">
+        <div class="initials">H</div>
+        <div><div class="name">Harish</div><div class="role">Founder, UrbanCraft Furniture</div></div>
+      </div>
+    </div>
+    <div class="about-art reveal-right" style="background-image:url('https://images.pexels.com/photos/18947394/pexels-photo-18947394.jpeg?auto=compress&cs=tinysrgb&w=1200')">
+      <div class="frame-content">
+        <p class="cap">A craftsman shaping timber by hand, inside a warm wood-lit workshop</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-head reveal-left">
+      <span class="eyebrow">Contact Us</span>
+      <h2>Let's Build Your<br>Dream Space Together</h2>
+      <p>Whether you're furnishing a new home, renovating a space, or planning a bulk order for a hotel or office — our team guides you from consultation to installation.</p>
+      <div class="contact-ctas">
+        <a href="#contact-form" class="btn btn-primary">Book a Consultation</a>
+        <a href="#contact-form" class="btn btn-outline-light">Request a Custom Design</a>
+      </div>
+
+      <div class="contact-card">
+        <h3>Reach Us Directly</h3>
+        <div class="contact-info">
+          <a class="info-row" href="tel:+919360868232" aria-label="Call UrbanCraft Furniture at +91 93608 68232">
+            <span class="info-icon" aria-hidden="true">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            <span class="info-text"><b>Call Us</b><span>+91 93608 68232</span></span>
+          </a>
+          <a class="info-row" href="mailto:harishtg33@gmail.com?subject=Furniture%20Consultation%20Request&body=Hello%20UrbanCraft%2C%0A%0AI%20would%20like%20to%20know%20more%20about%20your%20furniture.%0A%0AThank%20you." aria-label="Email UrbanCraft Furniture at harishtg33@gmail.com">
+            <span class="info-icon" aria-hidden="true">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" stroke="none"/><path d="M22 6c0 .55-.45 1-1 1H3c-.55 0-1-.45-1-1V5.5C2 4.67 2.67 4 3.5 4h17c.83 0 1.5.67 1.5 1.5V6z" stroke="none"/><path d="M2 6l10 7L22 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+            </span>
+            <span class="info-text"><b>Email Us</b><span>harishtg33@gmail.com</span></span>
+          </a>
+          <a class="info-row insta" href="https://instagram.com/haryz_786_" target="_blank" rel="noopener noreferrer" aria-label="Visit UrbanCraft on Instagram">
+            <span class="info-icon" aria-hidden="true">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </span>
+            <span class="info-text"><b>Follow Us</b><span>@haryz_786_</span></span>
+          </a>
+          <div class="info-row hours-row" style="min-height:auto;">
+            <span class="info-icon" aria-hidden="true">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </span>
+            <span class="info-text"><b>Business Hours</b><span>Mon – Sat, 9:30 AM – 7:30 PM</span></span>
+          </div>
+          <div class="info-row" style="min-height:auto;">
+            <span class="info-icon" aria-hidden="true">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <span class="info-text"><b>Studio</b><span>Madurai, Tamil Nadu, India</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-card reveal-scale">
+        <div class="map-frame-wrap">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3930.4672634952744!2d78.1091660753482!3d9.894984990205124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOcKwNTMnNDIuMCJOIDc4wrAwNic0Mi4zIkU!5e0!3m2!1sen!2sin!4v1784607605552!5m2!1sen!2sin"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="UrbanCraft Furniture studio location on Google Maps"
+            allowfullscreen></iframe>
+        </div>
+        <div class="map-card-foot">
+          <div class="map-coords">Lat <b>9.894985</b> &nbsp;·&nbsp; Long <b>78.109166</b></div>
+          <a class="btn btn-outline" style="padding:11px 20px;" href="https://www.google.com/maps?q=9.894984990205124,78.1091660753482" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-card reveal-right" id="contact-form">
+      <h3>Tell Us About Your Space</h3>
+      <form onsubmit="return handleSubmit(event)">
+        <div class="form-row">
+          <div><label for="name">Full Name</label><input id="name" required placeholder="Your name"></div>
+          <div><label for="phone">Phone</label><input id="phone" required placeholder="+91"></div>
+        </div>
+        <div class="form-row">
+          <div><label for="email">Email</label><input id="email" type="email" placeholder="you@email.com"></div>
+          <div><label for="type">Project Type</label>
+            <select id="type">
+              <option>Residential Home</option>
+              <option>Custom Furniture</option>
+              <option>Office</option>
+              <option>Hotel / Restaurant</option>
+              <option>Wholesale / Bulk Order</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-full">
+          <label for="msg">Tell us about your requirement</label>
+          <textarea id="msg" placeholder="Space size, budget range, style preference..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Request</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <span class="logo-badge"><img src="assets/logo.png" alt="UrbanCraft Furniture logo" width="48" height="48" loading="lazy"></span>
+          <span class="brand-name serif">UrbanCraft<small>Furniture</small></span>
+        </div>
+        <p class="foot-desc">A custom furniture brand transforming empty spaces into comfortable living experiences through handcrafted wooden furniture and personalized design.</p>
+        <p class="foot-tag">Crafted with Passion. Built for Comfort. Designed for Life.</p>
+        <div class="foot-social">
+          <a href="tel:+919360868232" aria-label="Call UrbanCraft Furniture">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </a>
+          <a href="mailto:harishtg33@gmail.com?subject=Furniture%20Consultation%20Request&body=Hello%20UrbanCraft%2C%0A%0AI%20would%20like%20to%20know%20more%20about%20your%20furniture.%0A%0AThank%20you." aria-label="Email UrbanCraft Furniture">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l10 7L22 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+          </a>
+          <a class="insta" href="https://instagram.com/haryz_786_" target="_blank" rel="noopener noreferrer" aria-label="Visit UrbanCraft on Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a class="whatsapp" href="https://wa.me/919360868232?text=Hello%20UrbanCraft%20Furniture%2C%0A%0AI%20would%20like%20to%20know%20more%20about%20your%20furniture%20collection." target="_blank" rel="noopener noreferrer" aria-label="Chat with UrbanCraft Furniture on WhatsApp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.85 9.85 0 0 0 12.04 2zm5.8 14.06c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.12.11-1.81-.11-.42-.13-.95-.31-1.64-.6-2.88-1.24-4.76-4.13-4.9-4.32-.14-.19-1.17-1.55-1.17-2.96 0-1.4.74-2.09 1-2.38.26-.28.57-.35.76-.35h.55c.18 0 .42-.07.65.5.24.58.82 2.01.89 2.16.07.15.12.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.28-.12.56.16.28.7 1.16 1.51 1.88 1.04.93 1.92 1.22 2.2 1.36.28.14.44.12.6-.07.16-.19.68-.79.87-1.06.18-.28.36-.23.6-.14.24.09 1.55.73 1.82.86.27.14.44.2.51.31.07.12.07.65-.17 1.33z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#why">Why UrbanCraft</a></li>
+          <li><a href="#process">Our Process</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="#products">Residential</a></li>
+          <li><a href="#products">Office Furniture</a></li>
+          <li><a href="#products">Hospitality</a></li>
+          <li><a href="#contact">Wholesale Enquiry</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://www.google.com/maps?q=9.894984990205124,78.1091660753482" target="_blank" rel="noopener noreferrer" class="foot-contact-link">Madurai, Tamil Nadu, India</a></li>
+          <li><a href="mailto:harishtg33@gmail.com?subject=Furniture%20Consultation%20Request&body=Hello%20UrbanCraft%2C%0A%0AI%20would%20like%20to%20know%20more%20about%20your%20furniture.%0A%0AThank%20you." class="foot-contact-link">harishtg33@gmail.com</a></li>
+          <li><a href="tel:+919360868232" class="foot-contact-link">+91 93608 68232</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 UrbanCraft Furniture. All rights reserved.</span>
+      <span>Furniture Manufacturer · Custom Furniture · Interior Design Services</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ FLOATING WHATSAPP ============ -->
+<a class="whatsapp-float" href="https://wa.me/919360868232?text=Hello%20UrbanCraft%20Furniture%2C%0A%0AI%20would%20like%20to%20know%20more%20about%20your%20furniture%20collection." target="_blank" rel="noopener noreferrer" aria-label="Chat with UrbanCraft Furniture on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.85 9.85 0 0 0 12.04 2zm5.8 14.06c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.12.11-1.81-.11-.42-.13-.95-.31-1.64-.6-2.88-1.24-4.76-4.13-4.9-4.32-.14-.19-1.17-1.55-1.17-2.96 0-1.4.74-2.09 1-2.38.26-.28.57-.35.76-.35h.55c.18 0 .42-.07.65.5.24.58.82 2.01.89 2.16.07.15.12.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.28-.12.56.16.28.7 1.16 1.51 1.88 1.04.93 1.92 1.22 2.2 1.36.28.14.44.12.6-.07.16-.19.68-.79.87-1.06.18-.28.36-.23.6-.14.24.09 1.55.73 1.82.86.27.14.44.2.51.31.07.12.07.65-.17 1.33z"/></svg>
+</a>
+
+<script>
+  // Scroll reveal (fires once per element)
+  const revealSelectors = '.reveal, .reveal-left, .reveal-right, .reveal-scale';
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:0.15});
+  document.querySelectorAll(revealSelectors).forEach(el=>io.observe(el));
+
+  // Header background on scroll
+  const header = document.querySelector('header');
+  const onScroll = ()=>{ header.classList.toggle('scrolled', window.scrollY > 30); };
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  function handleSubmit(e){
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type="submit"]');
+    const original = btn.textContent;
+    btn.textContent = 'Request Sent ✓';
+    btn.style.background = '#355E3B';
+    btn.style.color = '#F8F6F2';
+    setTimeout(()=>{ btn.textContent = original; btn.style.background=''; btn.style.color=''; e.target.reset(); }, 2600);
+  }
+</script>
+</body>
+</html>
