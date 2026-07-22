@@ -1,0 +1,279 @@
+/* ========================================
+   UrbanCraft Furniture — Animations
+   ======================================== */
+
+/* ── Fade Up ── */
+.anim-fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.anim-fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Fade In ── */
+.anim-fade-in {
+  opacity: 0;
+  transition: opacity var(--transition-slow);
+}
+
+.anim-fade-in.is-visible {
+  opacity: 1;
+}
+
+/* ── Slide Left ── */
+.anim-slide-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.anim-slide-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── Slide Right ── */
+.anim-slide-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.anim-slide-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── Scale In ── */
+.anim-scale-in {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.anim-scale-in.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ── Stagger Children ── */
+.anim-stagger > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.anim-stagger.is-visible > *:nth-child(1) { transition-delay: 0ms; }
+.anim-stagger.is-visible > *:nth-child(2) { transition-delay: 100ms; }
+.anim-stagger.is-visible > *:nth-child(3) { transition-delay: 200ms; }
+.anim-stagger.is-visible > *:nth-child(4) { transition-delay: 300ms; }
+.anim-stagger.is-visible > *:nth-child(5) { transition-delay: 400ms; }
+.anim-stagger.is-visible > *:nth-child(6) { transition-delay: 500ms; }
+.anim-stagger.is-visible > *:nth-child(7) { transition-delay: 600ms; }
+
+.anim-stagger.is-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Image Reveal ── */
+.anim-img-reveal {
+  position: relative;
+  overflow: hidden;
+}
+
+.anim-img-reveal::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--color-bg);
+  transform: scaleX(1);
+  transform-origin: right;
+  transition: transform 800ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.anim-img-reveal.is-visible::after {
+  transform: scaleX(0);
+}
+
+/* ── Line Expand ── */
+.anim-line {
+  width: 0;
+  height: 2px;
+  background: var(--color-gold);
+  transition: width 800ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.anim-line.is-visible {
+  width: 60px;
+}
+
+/* ── Counter ── */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Float ── */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+.anim-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* ── Pulse Gold ── */
+@keyframes pulseGold {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(200, 155, 60, 0.3); }
+  50%      { box-shadow: 0 0 0 12px rgba(200, 155, 60, 0); }
+}
+
+/* ── Spin ── */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ── Page transition ── */
+.page-enter {
+  animation: pageEnter 500ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ═══════════════════════════════════════
+   HERO ANIMATIONS — Premium Stagger
+   ═══════════════════════════════════════ */
+
+/* Hero container entrance */
+.hero__inner {
+  opacity: 0;
+  animation: heroContainerIn 600ms cubic-bezier(0.4, 0, 0.2, 1) 200ms forwards;
+}
+
+@keyframes heroContainerIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Hero label — soft slide in */
+.hero__label {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroElementIn 500ms cubic-bezier(0.4, 0, 0.2, 1) 400ms forwards;
+}
+
+/* Hero title — stagger in */
+.hero__title {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroElementIn 600ms cubic-bezier(0.4, 0, 0.2, 1) 550ms forwards;
+}
+
+/* Hero description */
+.hero__desc {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroElementIn 500ms cubic-bezier(0.4, 0, 0.2, 1) 750ms forwards;
+}
+
+/* Hero buttons */
+.hero__btns {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroElementIn 500ms cubic-bezier(0.4, 0, 0.2, 1) 900ms forwards;
+}
+
+/* Hero scroll hint */
+.hero__scroll-hint {
+  opacity: 0;
+  animation: heroElementIn 500ms cubic-bezier(0.4, 0, 0.2, 1) 1200ms forwards;
+}
+
+@keyframes heroElementIn {
+  from {
+    opacity: 0;
+    transform: translateY(var(--hero-translate-y, 20px));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero image — soft reveal */
+.hero__bg img {
+  opacity: 0;
+  transform: scale(1.05);
+  animation: heroImageReveal 1200ms cubic-bezier(0.4, 0, 0.2, 1) 100ms forwards;
+}
+
+@keyframes heroImageReveal {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+}
+
+/* ═══════════════════════════════════════
+   LAZY IMAGE FADE-IN
+   ═══════════════════════════════════════ */
+.img-lazy-fade {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.img-lazy-fade.img-lazy-loaded {
+  opacity: 1;
+}
+
+/* ═══════════════════════════════════════
+   PREFERS REDUCED MOTION
+   ═══════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .anim-fade-up,
+  .anim-fade-in,
+  .anim-slide-left,
+  .anim-slide-right,
+  .anim-scale-in,
+  .anim-stagger > *,
+  .hero__inner,
+  .hero__label,
+  .hero__title,
+  .hero__desc,
+  .hero__btns,
+  .hero__scroll-hint,
+  .hero__bg img,
+  .img-lazy-fade {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

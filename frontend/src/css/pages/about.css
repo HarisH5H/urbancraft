@@ -1,0 +1,203 @@
+/* ========================================
+   UrbanCraft — About Page Styles
+   ======================================== */
+
+.about-hero {
+  padding: calc(var(--nav-height) + var(--space-4xl)) 0 var(--space-4xl);
+  text-align: center;
+  background: var(--color-bg-alt);
+}
+
+.about-hero__title {
+  font-size: var(--fs-4xl);
+  margin-bottom: var(--space-lg);
+}
+
+.about-hero__subtitle {
+  max-width: 620px;
+  margin: 0 auto;
+  color: var(--color-text-light);
+  font-size: var(--fs-md);
+  line-height: var(--lh-relaxed);
+}
+
+/* ── Founder Story ── */
+.founder {
+  padding: var(--space-5xl) 0;
+  overflow: hidden;
+}
+
+.founder__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--space-4xl);
+  align-items: center;
+}
+
+.founder__img-wrap {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.founder__img-wrap img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+}
+
+.founder__img-badge {
+  position: absolute;
+  bottom: var(--space-xl);
+  left: var(--space-xl);
+  background: var(--color-gold);
+  color: var(--color-white);
+  padding: var(--space-md) var(--space-xl);
+  border-radius: var(--radius-md);
+  font-family: var(--font-heading);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-semi);
+}
+
+.founder__text {
+  color: var(--color-text-light);
+  font-size: var(--fs-base);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-lg);
+}
+
+.founder__quote {
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  font-style: italic;
+  color: var(--color-heading);
+  line-height: var(--lh-snug);
+  padding: var(--space-xl);
+  border-left: 3px solid var(--color-gold);
+  background: var(--color-gold-light);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin: var(--space-2xl) 0;
+}
+
+.founder__signature {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  font-style: italic;
+  color: var(--color-gold);
+  margin-top: var(--space-lg);
+}
+
+@media (max-width: 900px) {
+  .founder__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+}
+
+/* ── Vision & Mission ── */
+.vm-section {
+  padding: var(--space-5xl) 0;
+  background: var(--color-bg-alt);
+}
+
+.vm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  margin-top: var(--space-2xl);
+}
+
+.vm-card {
+  padding: var(--space-2xl);
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+}
+
+.vm-card__icon {
+  width: 56px;
+  height: 56px;
+  background: var(--color-gold-light);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-lg);
+}
+
+.vm-card__icon svg {
+  width: 26px;
+  height: 26px;
+  stroke: var(--color-gold);
+  fill: none;
+  stroke-width: 1.5;
+}
+
+.vm-card__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  color: var(--color-heading);
+  margin-bottom: var(--space-md);
+}
+
+.vm-card__text {
+  font-size: var(--fs-sm);
+  color: var(--color-text-light);
+  line-height: var(--lh-relaxed);
+}
+
+@media (max-width: 768px) {
+  .vm-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Values ── */
+.values {
+  padding: var(--space-5xl) 0;
+}
+
+.values__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+  margin-top: var(--space-3xl);
+}
+
+.value-item {
+  text-align: center;
+  padding: var(--space-xl);
+}
+
+.value-item__number {
+  font-family: var(--font-heading);
+  font-size: var(--fs-3xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-gold);
+  margin-bottom: var(--space-sm);
+}
+
+.value-item__label {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-heading);
+  margin-bottom: var(--space-xs);
+}
+
+.value-item__text {
+  font-size: var(--fs-xs);
+  color: var(--color-text-lighter);
+}
+
+@media (max-width: 768px) {
+  .values__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .values__grid {
+    grid-template-columns: 1fr;
+  }
+}

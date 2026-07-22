@@ -1,0 +1,180 @@
+/* ========================================
+   UrbanCraft — Business (B2B) Page Styles
+   ======================================== */
+
+.business-hero {
+  position: relative;
+  padding: calc(var(--nav-height) + var(--space-5xl)) 0 var(--space-5xl);
+  background: var(--color-green);
+  overflow: hidden;
+  text-align: center;
+}
+
+.business-hero__bg-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(255,255,255,0.8) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.6) 0%, transparent 40%);
+}
+
+.business-hero .section-label {
+  color: var(--color-gold);
+}
+
+.business-hero .section-title {
+  color: var(--color-white);
+  font-size: var(--fs-4xl);
+  max-width: 700px;
+  margin: 0 auto var(--space-lg);
+}
+
+.business-hero .section-subtitle {
+  color: rgba(255,255,255,0.75);
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+/* ── Clients ── */
+.b2b-clients {
+  padding: var(--space-5xl) 0;
+}
+
+.b2b-clients__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+  margin-top: var(--space-3xl);
+}
+
+.b2b-client-card {
+  text-align: center;
+  padding: var(--space-2xl) var(--space-xl);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  transition: all var(--transition-base);
+}
+
+.b2b-client-card:hover {
+  border-color: var(--color-gold);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.b2b-client-card__icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--space-lg);
+  background: var(--color-gold-light);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.b2b-client-card__icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--color-gold);
+  fill: none;
+  stroke-width: 1.5;
+}
+
+.b2b-client-card__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  color: var(--color-heading);
+  margin-bottom: var(--space-sm);
+}
+
+.b2b-client-card__text {
+  font-size: var(--fs-sm);
+  color: var(--color-text-light);
+  line-height: var(--lh-relaxed);
+}
+
+@media (max-width: 900px) {
+  .b2b-clients__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .b2b-clients__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Benefits ── */
+.b2b-benefits {
+  padding: var(--space-5xl) 0;
+  background: var(--color-bg-alt);
+}
+
+.b2b-benefits__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  margin-top: var(--space-2xl);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.b2b-benefit {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-heading);
+}
+
+.b2b-benefit svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--color-gold);
+  fill: none;
+  stroke-width: 2;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .b2b-benefits__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Inquiry Form ── */
+.b2b-form-section {
+  padding: var(--space-5xl) 0;
+}
+
+.b2b-form-wrap {
+  max-width: 720px;
+  margin: var(--space-3xl) auto 0;
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-3xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.b2b-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+@media (max-width: 600px) {
+  .b2b-form__row {
+    grid-template-columns: 1fr;
+  }
+  .b2b-form-wrap {
+    padding: var(--space-xl);
+  }
+}

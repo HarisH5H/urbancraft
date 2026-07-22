@@ -1,0 +1,299 @@
+/* ========================================
+   UrbanCraft — Admin Dashboard Styles
+   ======================================== */
+
+.admin-page {
+  padding: calc(var(--nav-height) + var(--space-3xl)) 0 var(--space-5xl);
+  min-height: 100vh;
+}
+
+/* ── Header ── */
+.admin-header {
+  margin-bottom: var(--space-3xl);
+}
+
+.admin-header__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.admin-header__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-3xl);
+  color: var(--color-heading);
+}
+
+.admin-header__stats {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.admin-stat {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-xl);
+  text-align: center;
+  min-width: 100px;
+}
+
+.admin-stat__count {
+  font-family: var(--font-heading);
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-gold);
+  display: block;
+}
+
+.admin-stat__label {
+  font-size: var(--fs-xs);
+  color: var(--color-text-lighter);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+}
+
+/* ── Filter Tabs ── */
+.admin-filters {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+.admin-filter-btn {
+  padding: 10px 24px;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-light);
+  background: var(--color-white);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+}
+
+.admin-filter-btn:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.admin-filter-btn.active {
+  background: var(--color-gold);
+  color: var(--color-white);
+  border-color: var(--color-gold);
+}
+
+/* ── Table Container ── */
+.admin-table-wrap {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.admin-table-scroll {
+  overflow-x: auto;
+}
+
+/* ── Table ── */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+.admin-table th {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semi);
+  color: var(--color-text-lighter);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+  padding: var(--space-md) var(--space-lg);
+  text-align: left;
+  background: var(--color-bg-alt);
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.admin-table td {
+  padding: var(--space-md) var(--space-lg);
+  font-size: var(--fs-sm);
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+}
+
+.admin-table tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-table tr:hover td {
+  background: rgba(200, 155, 60, 0.03);
+}
+
+/* ── Cell Styles ── */
+.admin-cell-name {
+  font-weight: var(--fw-medium);
+  color: var(--color-heading);
+  white-space: nowrap;
+}
+
+.admin-cell-email a,
+.admin-cell-phone a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.admin-cell-email a:hover,
+.admin-cell-phone a:hover {
+  color: var(--color-gold);
+}
+
+.admin-cell-message {
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin-cell-date {
+  white-space: nowrap;
+  color: var(--color-text-lighter);
+  font-size: var(--fs-xs);
+}
+
+/* ── Badges ── */
+.admin-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semi);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  border-radius: var(--radius-full);
+}
+
+.admin-badge--contact {
+  background: var(--color-gold-light);
+  color: var(--color-gold);
+}
+
+.admin-badge--business {
+  background: rgba(53, 94, 59, 0.1);
+  color: var(--color-green);
+}
+
+.admin-badge--new {
+  background: var(--color-gold-light);
+  color: var(--color-gold);
+}
+
+.admin-badge--read {
+  background: rgba(53, 94, 59, 0.1);
+  color: var(--color-green);
+}
+
+.admin-badge--replied {
+  background: rgba(107, 79, 59, 0.1);
+  color: var(--color-text-lighter);
+}
+
+/* ── Action Buttons ── */
+.admin-actions {
+  display: flex;
+  gap: var(--space-xs);
+  white-space: nowrap;
+}
+
+.admin-action-btn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+}
+
+.admin-action-btn:hover {
+  border-color: var(--color-gold);
+  background: var(--color-gold-light);
+}
+
+.admin-action-btn--delete:hover {
+  border-color: #c0392b;
+  background: rgba(192, 57, 43, 0.08);
+}
+
+.admin-action-btn svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--color-text-light);
+  fill: none;
+  stroke-width: 2;
+}
+
+.admin-action-btn--delete svg {
+  stroke: #c0392b;
+}
+
+/* ── Status Select ── */
+.admin-status-select {
+  font-size: var(--fs-xs);
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  color: var(--color-text);
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+/* ── Empty State ── */
+.admin-empty {
+  text-align: center;
+  padding: var(--space-4xl) var(--space-xl);
+  color: var(--color-text-lighter);
+}
+
+.admin-empty svg {
+  width: 64px;
+  height: 64px;
+  stroke: var(--color-text-lighter);
+  fill: none;
+  margin: 0 auto var(--space-lg);
+  display: block;
+}
+
+.admin-empty p {
+  color: var(--color-text-lighter);
+  font-size: var(--fs-md);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .admin-header__top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .admin-header__stats {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .admin-stat {
+    flex: 1;
+    min-width: auto;
+  }
+}
