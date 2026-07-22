@@ -12,7 +12,14 @@ const PORT = process.env.PORT || 3000;
 const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:5173';
 
 // ── Middleware ──
-app.use(cors({ origin: FRONTEND_URL }));
+app.use(cors({
+  origin: [
+    FRONTEND_URL,
+    'https://urbancraft-brown.vercel.app',
+    'http://localhost:5173',
+    'http://localhost:4173'
+  ]
+}));
 app.use(express.json());
 
 // ── Routes ──
